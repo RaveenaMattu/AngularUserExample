@@ -1,5 +1,32 @@
-
-{{user.uName}}
+<!-- {{user.uName}}
 {{user.uAge}}
 {{user.uBio}}
-{{user.uEmail}}
+{{user.uEmail}} -->
+
+<div class="card border-0 shadow-lg" style="width: 60rem">
+  <div class="card-body d-grid" style="grid-template-columns: repeat(2, auto); gap: 50px">
+    <img [src]="user.photoUrl" class="card-img-top" alt="user-image" />
+    <div class="text">
+      <h3 class="card-title">User Details
+      @if (!user.isOnline) {
+        <span class="dot" style="display: block; background: #aa1717"></span>
+      } @else {
+        <span class="dot" style="display: block; background: #03723b"></span>
+
+      }</h3>
+      <p class="card-text"><b>Name: </b>{{ user.uName }}</p>
+      <p class="card-text"><b>Age: </b>{{ user.uAge }}</p>
+      <p class="card-text"><b>Email: </b>{{ user.uEmail }}</p>
+      <textarea
+        class="form-control card-text border-0" style="width: 30rem"
+        rows="5"
+        [(ngModel)]="user.uBio">
+      </textarea>
+    </div>
+    @if (user.isOnline) {
+      <button class="btn btn-danger" (click)="toggleStatus()">Go Offline</button>
+    } @else {
+      <button class="btn btn-success" (click)="toggleStatus()">Go Online</button>
+    }
+  </div>
+</div>

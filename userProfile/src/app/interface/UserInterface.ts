@@ -4,4 +4,5 @@ export interface UserInterface {
   photoUrl?: string;
   uBio: string;
   uEmail: string;
+  isOnline: boolean;
 }

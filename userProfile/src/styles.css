@@ -1,2 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 @import "bootstrap/dist/css/bootstrap.min.css";
+.card {
+  position: fixed;
+  top: 20%;
+  left: 22%;
+  padding: 50px 70px;
+}
+.card-img-top{
+  width: 300px;
+  height: auto;
+}
+.card-title {
+  margin-bottom: 30px;
+}
+.card-title {
+  line-height: 0.5;
+}
+.dot {
+  position: relative;
+  left: 160px;
+  bottom: 20px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+}
